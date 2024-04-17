@@ -1,0 +1,181 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0; font-family: "Vollkorn", Arial, Helvetica, sans-serif;}
+li {list-style: none;} img {width: 100%;}
+
+/* ESTRUTURA MACRO DO SITE */
+.grid
+{
+    display: grid; gap: 5px;
+    grid: "cabecalho cabecalho cabecalho"   
+          "animais   conteudo  anuncios" 
+          "rodape    rodape    rodape";
+    grid-template-columns: minmax(150px, 1fr) 3fr minmax(150px, 300px);
+}
+header {grid-area: cabecalho;}
+nav    {grid-area: animais;}
+main   {grid-area: conteudo;}
+aside  {grid-area: anuncios;}
+footer {grid-area: rodape;}
+
+/* CABEÇALHO */
+header {display: grid; grid-template-columns: 1fr auto; align-items: center;
+        background-color: black; color: white; padding: 30px;} 
+.logo {max-width: 20%; margin-left: 40px;}
+menu a {margin: 10px; color: white; text-decoration: none;}
+menu a:hover {text-decoration: underline; font-weight: bold;}
+
+/* CONTEÚDO INTERNO DO SITE - BARRA DE NAVEGAÇÃO LATERAL ESQUERDA */
+nav {padding: 20px; background: rgba(238, 236, 236, 0.63);}
+nav div {min-width: 60px; max-width: 100px; margin: 0 auto 20px auto; padding: 20px; 
+         box-shadow: 2px 2px 2px purple;}
+nav div:hover {background-color: white;} 
+
+/* CONTEÚDO PRINCIPAL */
+main 
+{   
+    max-width: 900px; margin: auto; padding: 20px;   
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.titulo, .legenda, .paragrafo2 {color: blueviolet;}
+.numero, .citacao, .info {background-color: blueviolet; color: white;}
+
+.titulo {line-height: 2.6em; margin-top: 20px;}
+.titulo h1 {font-size: 3.5em;} .titulo h2 {font-size: .9em; font-style: italic;}
+
+.caracteristicas {display: flex; justify-content: space-between; width: 230px;}
+.numero {height: 80px; width: 100px; font-size: 2.5em; 
+         display: flex; justify-content: center; align-items: center;}
+.legenda {height: 25px; text-align: center; box-shadow: 2px 2px 2px purple;}
+
+.paragrafo1, .citacao, .foto3 {grid-column: span 2;}
+.foto1, .info {grid-row: span 2;}
+.foto1, .foto2 {align-self: end;}
+.prgf {line-height: 1.5em; font-size: 1.2em; text-align: justify; text-indent: 30px;
+       letter-spacing: .02em;} /* aumenta ou diminui o espaçamento entre letras.
+                                  no video-aula diminui: -0.002em */
+.paragrafo2 {font-size: .8em; text-indent: 0; width: 230px;}
+.citacao, .info {text-align: center; padding: 30px;}
+.citacao p {max-width: 500px; margin: auto; font-size: 1.5em; font-style: italic; 
+                line-height: 1.5em;}
+.info {align-self: start; font-size: 1.2em; line-height: 1.2em;}
+
+/* CONTEÚDO RELACIONADO - BARRA DE NAVEGAÇÃO LATERAL DIREITA */
+aside 
+{
+  background: rgba(238, 236, 236, 0.63);
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* RODAPÉ */
+footer {text-align: center; padding: 30px; line-height: 1.5em;
+        background-color: black; color: white;}
+.rodape-cel-peq {display: none;}
+
+/* DESKTOP / LAPTOP c/telas menores */
+@media (max-width: 1200px) {.titulo h1 {font-size: 2.8em; line-height: .6em;}}
+
+/* TABLET - modo paisagem (horizontal) - */
+@media (max-width: 1100px) 
+{
+  /* ESTRUTURA MACRO DO SITE */
+  .grid
+  {
+      display: grid; gap: 5px;
+      grid: "cabecalho cabecalho cabecalho"   
+            "animais   conteudo  anuncios" 
+            "rodape    rodape    rodape";
+      grid-template-columns: 150px 1fr 220px;
+  }
+  nav {padding: 10px;}
+  aside {gap: 10px; padding: 10px;}
+}
+
+/* TABLET - modo retrato (vertical) - */
+@media (max-width: 1000px) 
+{
+  /* ESTRUTURA MACRO DO SITE */
+  .grid
+  {
+    display: grid; gap: 5px;
+    grid: "cabecalho cabecalho "   
+          "animais   conteudo  " 
+          "animais   anuncios  "
+          "rodape    rodape    ";
+    grid-template-columns: minmax(150px, 1fr) 3fr;
+  }
+  .logo img {width: 120%;}
+  .titulo {line-height: 2em;}
+  .titulo h1 {font-size: 3.5em;}
+}
+@media (max-width: 900px) {.titulo h1 {font-size: 3em;}}
+
+/* TABLET c/telas menores - modo retrato (vertical) - */
+@media (max-width: 800px) 
+{
+  /* ESTRUTURA MACRO DO SITE */
+  .grid
+  {
+    display: grid; gap: 5px;
+    grid: "cabecalho"  
+          "animais  " 
+          "conteudo " 
+          "anuncios "
+          "rodape   ";
+    grid-template-columns: 1fr;
+  }
+  .logo {margin-left: 10px;}
+  .logo img {width: 150px;}
+  nav {display: flex; overflow: scroll;}
+  /* no video-aula mostra uma configuração adicional para uma melhor experiência do usuário */
+}
+
+/* TABLET Mini - modo retrato (vertical) - */
+@media (max-width: 600px) 
+{
+  .titulo h1 {font-size: 2.6em;}
+  .citacao {font-size: .9em; padding: 20px;}
+  .info {font-size: 1em; padding: 20px;}
+  footer {font-size: .8em;}
+}
+
+/* CELULAR - modo retrato (vertical) - */
+@media (max-width: 500px) 
+{
+  main {display: block; padding: 10px; padding-top: 0;}
+  .logo {margin-left: 0px;}
+  .logo img {width: 120px;}
+  .titulo {display: inline-block; margin: 20px 0 0 20px;}
+  .caracteristicas {display: inline-flex; margin-left: 30px; width: 190px;}
+  .numero {height: 60px; width: 80px; font-size: 2em;}
+  .prgf {margin-top: 20px; margin-bottom: 20px;}
+  .paragrafo2 {margin-left: 40px;}
+  .citacao {margin-bottom: 20px;}
+  .info {width: 200px; margin: auto;}
+}
+
+/* CELULAR c/telas menores - modo retrato (vertical) - */
+@media (max-width: 450px) 
+{
+  header {display: block; text-align: center; padding: 20px;}
+  menu {margin-top: 10px;}
+  /* 
+  header {grid-template-columns: auto; justify-content: center;}
+  .logo {margin: auto;} menu {margin-top: 10px;}
+
+  pelo vídeo-aula usa-se 'header {grid-template-columns: auto;}',
+  só que não fica centralizado.
+  mesmo usando 'header {...; justify-content: center;}',
+  apenas o menu centraliza, a logo não; 
+  mesmo usando também '.logo {margin: auto;}' 
+  */
+  .caracteristicas {margin: 10px 0 10px 20px;}
+  .rodape-padrao {display: none;}
+  .rodape-cel-peq {display: block;}
+}
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildbeast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&   display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--
+        Essa é a 4ª versão do site do video-aula, com breakpoints (rwd). 
+        Obs: minha versão é diferente do video-aula.
+        estrutura do site (*) 
+        cabeçalho (*) / conteúdo principal (*) / rodapé 
+        barra de navegação lateral esquerda ('nav') 
+        barra de navegação lateral direita ('aside') (*)
+        
+        (*) 'display: grid';    
+    -->
+</head>
+<body>
+    <section class="grid">
+        <header>
+            <a href="#" class="logo"><img src="icones/wildbeast.svg" alt="wildbeast"></a>
+            <menu>
+                <a href="#">Animais</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </menu>
+        </header>
+        <nav>            
+            <div>
+                <a href="#"><img src="icones/abelha.svg" alt="abelha"></a>
+            </div>
+            <div>
+                <a href="#"><img src="icones/cervo.svg" alt="cervo"></a>
+            </div>
+            <div>
+                <a href="#"><img src="icones/gato.svg" alt="gato"></a>
+            </div>
+            <div>
+                <a href="#"><img src="icones/leao.svg" alt="leao"></a>
+            </div>
+            <div>
+                <a href="#"><img src="icones/ovelha.svg" alt="ovelha"></a>
+            </div>
+            <div>
+                <a href="#"><img src="icones/vaca.svg" alt="vaca"></a>
+            </div>
+        </nav>
+        <main>
+            <section class="titulo">
+                <h1>Lobo Cinza</h1>
+                <h2>da família canis lupus</h2> <!-- pode usar a tag <span>  -->
+            </section>
+
+            <section class="caracteristicas">
+                <div>
+                    <div class="numero">72</div>
+                    <div class="legenda">Kg</div>
+                </div>
+                <div>
+                    <div class="numero">13</div>
+                    <div class="legenda">Anos</div>
+                </div>
+            </section>
+
+            <div class="prgf paragrafo1">
+                <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p>
+            </div>
+
+            <img class="foto1" src="imagens/wolf1.jpg">
+
+            <div class="prgf paragrafo2">
+                <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos.</p>
+            </div>
+
+            <img class="foto2" src="imagens/wolf2.jpg">
+            
+            <div class="prgf paragrafo3">
+                <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude, como previsto pela teoria de Christian Bergmann. Em geral, a altura, medida a partir dos ombros, varia de 60 a 95 centímetros.</p>
+            </div>
+            <div class="prgf paragrafo4">
+                <p>O peso varia geograficamente. Em média, os lobos europeus pesam 38,5 kg; os lobos da América do Norte, 36 kg; os lobos indianos e árabes, 25 kg.[7] Embora raros, lobos com mais de 77 kg foram encontrados no Alasca, Canadá,[8] e na antiga União Soviética.</p>
+            </div>
+
+            <blockquote class="citacao">
+                <p>“Há algo no uivar do lobo que tira um homem do aqui e agora e o transporta para uma floresta da mente.”</p>
+                <!-- <cite>fonte da citação: Game of Thrones</cite> -->
+            </blockquote>
+
+            <ul class="info">
+                <li>Surgiu: 12.000 anos</li>
+                <p>--------------------------</p>
+                <li>Tipo: Mamífero</li>
+                <p>--------------------------</p>
+                <li>Idade Média: 13 anos</li>
+                <p>--------------------------</p>
+                <li>Macho adulto: 80kg</li>
+                <p>--------------------------</p>
+                <li>Fêmea adulta: 55kg</li>
+                <p>--------------------------</p>
+                <li>Família: Lupus</li>
+            </ul>
+
+            <div class="prgf paragrafo5">
+                <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p>
+            </div>
+            <div class="prgf paragrafo6">
+                <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p>
+            </div>
+            
+            <img class="foto3" src="imagens/wolf3.jpg">
+        </main>
+        <aside>
+            <div>
+                <a href="#"><img src="imagens/anuncio-1.jpg" alt="anuncio-1"></a>
+            </div>
+            <div>
+                <a href="#"><img src="imagens/anuncio-2.jpg" alt="anuncio-2"></a>
+            </div>
+        </aside>
+        <footer class="rodape-padrao">
+            <p>@Desenvolvido por LHS DevWeb. Todos os direitos reservados.</p>
+            <p>Canal no YouTube: @origamid - vídeo: 'CSS Grid Layout - Curso Completo'.</p>
+        </footer>
+        <footer class="rodape-cel-peq">
+            <p>@Desenvolvido por LHS DevWeb.</p>
+            <p>Todos os direitos reservados.</p>
+            <p>Canal no YouTube: @origamid.</p>
+            <p>vídeo: 'CSS Grid Layout-Curso Completo'.</p>
+        </footer>
+    </section>
+</body>
+</html>
