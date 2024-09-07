@@ -158,6 +158,8 @@ footer a:hover {text-decoration: underline;}
   .paragrafo2 {margin-left: 40px;}
   .citacao {margin-bottom: 20px;}
   .info {width: 200px; margin: auto;}
+  .rodape-padrao {display: none;}
+  .rodape-cel-peq {display: block;}
 }
 
 /* CELULAR c/telas menores - modo retrato (vertical) - */
@@ -176,8 +178,6 @@ footer a:hover {text-decoration: underline;}
   mesmo usando também '.logo {margin: auto;}' 
   */
   .caracteristicas {margin: 10px 0 10px 20px;}
-  .rodape-padrao {display: none;}
-  .rodape-cel-peq {display: block;}
 }
 
 
