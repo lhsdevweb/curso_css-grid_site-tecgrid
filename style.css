@@ -72,11 +72,11 @@ aside
 }
 
 /* RODAPÉ */
-footer {text-align: center; padding: 30px; line-height: 1.5em;
-        background-color: black; color: white;}
+footer {padding: 30px; background-color: black; color: white;}
 footer a {color: yellow; text-decoration: none;}
 footer a:hover {text-decoration: underline;}
-.rodape-cel-peq {display: none;}
+#paragrafo3 {display: none;}
+footer div {display: flex; justify-content: center;}
 
 /* DESKTOP / LAPTOP c/telas menores */
 @media (max-width: 1200px) {.titulo h1 {font-size: 2.8em; line-height: .6em;}}
@@ -114,7 +114,9 @@ footer a:hover {text-decoration: underline;}
   .titulo {line-height: 2em;}
   .titulo h1 {font-size: 3.5em;}
 }
-@media (max-width: 900px) {.titulo h1 {font-size: 3em;}}
+@media (max-width: 900px) {
+  .titulo h1 {font-size: 3em;}
+}
 
 /* TABLET c/telas menores - modo retrato (vertical) - */
 @media (max-width: 800px) 
@@ -133,6 +135,9 @@ footer a:hover {text-decoration: underline;}
   .logo {margin-left: 10px;}
   .logo img {width: 150px;}
   nav {display: flex; overflow: scroll;}
+  #paragrafo2 {display: none;}
+  #paragrafo3 {display: block; text-align: center;}
+  #paragrafo3 div {display: flex;}
   /* no video-aula mostra uma configuração adicional para uma melhor experiência do usuário */
 }
 
@@ -142,7 +147,8 @@ footer a:hover {text-decoration: underline;}
   .titulo h1 {font-size: 2.6em;}
   .citacao {font-size: .9em; padding: 20px;}
   .info {font-size: 1em; padding: 20px;}
-  footer {font-size: .8em;}
+  #paragrafo1 {display: block; text-align: center;}
+  #paragrafo1 .espaço {display: none;}
 }
 
 /* CELULAR - modo retrato (vertical) - */
