@@ -75,7 +75,7 @@ aside
 footer {padding: 30px; background-color: black; color: white;}
 footer a {color: yellow; text-decoration: none;}
 footer a:hover {text-decoration: underline;}
-#paragrafo3 {display: none;}
+#paragrafo3, #paragrafo4 {display: none;}
 footer div {display: flex; justify-content: center;}
 
 /* DESKTOP / LAPTOP c/telas menores */
@@ -184,6 +184,14 @@ footer div {display: flex; justify-content: center;}
   mesmo usando também '.logo {margin: auto;}' 
   */
   .caracteristicas {margin: 10px 0 10px 20px;}
+}
+@media (max-width: 400px) {
+  #paragrafo3 {display: none;}
+  #paragrafo4 {display: block; text-align: center;}
+  #paragrafo4 div {display: flex; justify-content: center;}
+}
+@media (max-width: 340px) {
+  footer {font-size: .8em;}
 }
 
 
